@@ -23,9 +23,10 @@ git remote add origin https://github.com/usuario/nombre-del-repositorio.git
 git branch -M main
 git push -u origin main
 
-'''
+
 # ACTUALIZAR CAMBIOS
 
+'''
 git status  # Verifica los cambios realizados
 git add .   # Agrega los cambios al área de staging
 git commit -m "Descripción de los cambios realizados"  # Guarda los cambios localmente
