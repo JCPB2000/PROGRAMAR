@@ -1,4 +1,5 @@
-﻿# CREAR REPOSITORIOS
+```
+ # CREAR REPOSITORIOS
 
 # Crear una carpeta para el proyecto
 mkdir nombre-del-proyecto
@@ -22,7 +23,7 @@ git remote add origin https://github.com/usuario/nombre-del-repositorio.git
 # Subir los cambios al repositorio remoto
 git branch -M main
 git push -u origin main
-
+```
 
 # ACTUALIZAR CAMBIOS
 
