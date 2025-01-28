@@ -23,8 +23,7 @@ git remote add origin https://github.com/usuario/nombre-del-repositorio.git
 git branch -M main
 git push -u origin main
 
-
-
+'''
 # ACTUALIZAR CAMBIOS
 
 git status  # Verifica los cambios realizados
@@ -34,7 +33,7 @@ git pull origin main --rebase  # Sincroniza con el remoto para evitar conflictos
 git push origin main  # Sube los cambios al repositorio remoto
 
 
-
+'''
 
 # Clonar el repositorio
 git clone https://github.com/JCPB2000/PROGRAMAR.git
