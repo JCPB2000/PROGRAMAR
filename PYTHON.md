@@ -16,7 +16,7 @@ MY_CONSTANTE =  “ MI CONSTANTE”
 
  ```
 # DATOS PRIMITIVOS
-```pii
+```
 my_int  =  1
 my_float  =  1.5
 my_bool  = true
