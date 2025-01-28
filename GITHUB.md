@@ -1,6 +1,5 @@
-```
  # CREAR REPOSITORIOS
-
+```
 # Crear una carpeta para el proyecto
 mkdir nombre-del-proyecto
 cd nombre-del-proyecto
@@ -34,8 +33,9 @@ git commit -m "Descripción de los cambios realizados"  # Guarda los cambios loc
 git pull origin main --rebase  # Sincroniza con el remoto para evitar conflictos
 git push origin main  # Sube los cambios al repositorio remoto
 ```
-```
+
 # Clonar el repositorio
+```
 git clone https://github.com/JCPB2000/PROGRAMAR.git
 
 # Entrar en la carpeta del repositorio
