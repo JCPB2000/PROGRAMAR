@@ -1,10 +1,14 @@
 # COMENTARIO EN UNA LINEA
+
 ```
 \
 #
 “””
 ´´´
+```
+
 # Variable / CONSTANTE
+
 ```
  my_variable = “ Mi variable”
 MY_CONSTANTE =  “ Mi constante”   # Por convención
