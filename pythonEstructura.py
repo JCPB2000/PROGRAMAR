@@ -24,7 +24,7 @@ my_other_string =  “ Mi otra cadena de texto”
 
  
 # INTERATIVAS
-For i in renge(11):
+for i in range(11):
 print(i)
 i = 0
 while i <=10:
@@ -34,11 +34,11 @@ I +=  1
 
 # MANEJO DE EXCEPCIONES
 Try:
- Print(10/0)
+ print(10/0)
 Except:
-Print(“se ha producido un error”)
+print(“se ha producido un error”)
 Finally:
-Print(“Ha finalizado el manejo de excepciones”)
+print(“Ha finalizado el manejo de excepciones”)
 “””
 
 # Extra
@@ -69,7 +69,7 @@ print(f”División entera:  10 //3 = {10 // 3}”)
 
 
 # OPERADPRES DE COMPARACIÓN
-print(f”Igualdad:  10 == 3 = {10 ==  3}”)
+print(f"gualdad:  10 == 3 = {10 ==  3}")
 print(f”Desigualdad:  10 != 3 = {10 !=  3}”)
 print(f”Mayor que:  10 > 3 = {10 >  3}”)
 print(f”Mayor o igual que:  10 >=  3 = {10 >=  3}”)
