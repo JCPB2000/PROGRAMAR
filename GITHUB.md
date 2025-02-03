@@ -50,3 +50,12 @@ code .
 ```
 https://pandao.github.io/editor.md/en.html
 ```
+
+# PARA ACTUALIZAR CAMBIOS CUANDO SE MUEVE CARPETAS
+```
+git add -A
+git commit -m "Agregando cambios en el directorio PROGRAMAR"
+git pull origin main --rebase
+git push origin main
+
+```
