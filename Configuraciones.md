@@ -25,3 +25,13 @@ CTR x para salir
 para habilitar
 sudo a2ensite losvencedores3tespe.com.conf
 ```
+
+# Resumen de Comandos
+Comando	Descripción
+```
+df -h	# Ver espacio total y disponible en disco.
+du -h --max-depth=1 /	#Ver cuánto ocupa cada carpeta.
+lsblk	#Ver discos y particiones conectadas.
+sudo fdisk -l	#Información detallada de discos y particiones.
+find / -type f -size +100M	#Encontrar archivos grandes en el servidor.
+```
