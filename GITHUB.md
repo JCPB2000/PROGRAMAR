@@ -1,20 +1,13 @@
  # CREAR REPOSITORIOS
 ```
 # Crear una carpeta para el proyecto
-mkdir nombre-del-proyecto
-cd nombre-del-proyecto
+git remote remove origin  
+git remote add origin https://github.com/JCPB2000/biblioteca.git  
+git remote -v  
+git branch -M main  
+git pull origin main --rebase  
+git push -u origin main  
 
-# Inicializar un repositorio local
-git init
-
-# Crear un archivo README (opcional)
-echo "# Mi nuevo repositorio" >> README.md
-
-# Agregar los archivos al área de staging
-git add .
-
-# Crear el commit inicial
-git commit -m "Primer commit: Inicialización del repositorio"
 
 # Conectar el repositorio local con GitHub
 git remote add origin https://github.com/usuario/nombre-del-repositorio.git
