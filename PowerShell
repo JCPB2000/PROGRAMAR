@@ -1,0 +1,3 @@
+//ingresar en la carpeta  donde esta todos los archivos  Ejecuta este comando para extraer todo el código y guardarlo en un archivo:
+
+Get-ChildItem -Path . -Recurse -File | ForEach-Object { Get-Content $_.FullName } > codigo_proyecto.txt
