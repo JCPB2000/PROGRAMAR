@@ -1,3 +1,62 @@
 //ingresar en la carpeta  donde esta todos los archivos  Ejecuta este comando para extraer todo el código y guardarlo en un archivo:
 
 Get-ChildItem -Path . -Recurse -File | ForEach-Object { Get-Content $_.FullName } > codigo_proyecto.txt
+
+
+//Verificar archivos modificados recientemente
+
+$folderPath = "C:\xampp\htdocs\gestion_libros"
+Get-ChildItem -Path $folderPath -File -Recurse | Select-Object FullName, LastWriteTime
+
+
+//Si quieres guardar una copia de los archivos antes de sobrescribirlos, usa este:
+
+powershell
+Copiar
+Editar
+$folderPath = "C:\xampp\htdocs\gestion_libros"
+$backupFolder = "C:\xampp\htdocs\gestion_libros_backup"
+$nuevoContenido = @"
+Este es el nuevo contenido de los archivos en la carpeta.
+"@
+
+# Crear una carpeta de respaldo si no existe
+if (!(Test-Path $backupFolder)) {
+    New-Item -ItemType Directory -Path $backupFolder
+}
+
+# Copiar todos los archivos a la carpeta de respaldo
+Copy-Item -Path "$folderPath\*" -Destination $backupFolder -Recurse -Force
+
+# Sobrescribir el contenido de los archivos en la carpeta original
+Get-ChildItem -Path $folderPath -File -Recurse | ForEach-Object {
+    Set-Content -Path $_.FullName -Value $nuevoContenido -Encoding UTF8
+
+}
+
+// Script para reemplazar el contenido de todos los archivos
+powershell
+Copiar
+Editar
+$folderPath = "C:\xampp\htdocs\gestion_libros"
+$nuevoContenido = @"
+Este es el nuevo contenido de todos los archivos en la carpeta.
+Puedes escribir aquí lo que quieras que contengan.
+"@
+
+# Buscar todos los archivos en la carpeta y subcarpetas y sobrescribir su contenido
+Get-ChildItem -Path $folderPath -File -Recurse | ForEach-Object {
+    Set-Content -Path $_.FullName -Value $nuevoContenido -Encoding UTF8
+}
+
+i usaste mi script de respaldo (gestion_libros_backup), puedes comparar los archivos originales con los respaldados:
+
+powershell
+Copiar
+Editar
+$originalFolder = "C:\xampp\htdocs\gestion_libros"
+$backupFolder = "C:\xampp\htdocs\gestion_libros_backup"
+
+Compare-Object -ReferenceObject (Get-ChildItem -Path $backupFolder -File -Recurse) `
+               -DifferenceObject (Get-ChildItem -Path $originalFolder -File -Recurse) `
+               -Property Name, LastWriteTime
