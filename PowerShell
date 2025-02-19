@@ -3,6 +3,11 @@
 Get-ChildItem -Path . -Recurse -File | ForEach-Object { Get-Content $_.FullName } > codigo_proyecto.txt
 
 
+Listar solo nombres de archivos con rutas completas
+
+Get-ChildItem -Path "C:\ruta\de\la\carpeta" -Recurse -File | Select-Object FullName
+
+
 //Verificar archivos modificados recientemente
 
 $folderPath = "C:\xampp\htdocs\gestion_libros"
